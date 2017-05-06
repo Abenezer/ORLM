@@ -30,7 +30,7 @@ namespace ORLM.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ORLM.DAL.Properties.Settings.ORLMConnectionString", throwIfV1Schema: false)
         {
         }
 
@@ -38,6 +38,23 @@ namespace ORLM.Models
         {
             return new ApplicationDbContext();
         }
+
+
+        protected override void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+
+            modelBuilder.Entity<ApplicationUser>().ToTable("User", "dbo");
+            modelBuilder.Entity<IdentityRole>().ToTable("Role", "dbo");
+            modelBuilder.Entity<IdentityUserRole>().ToTable("UserRole", "dbo");
+            modelBuilder.Entity<IdentityUserClaim>().ToTable("UserClaim", "dbo");
+            modelBuilder.Entity<IdentityUserLogin>().ToTable("UserLogin", "dbo");
+
+        }
+
+
+
     }
 }
 
