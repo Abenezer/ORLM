@@ -11,23 +11,23 @@
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
            <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Process" CssClass="col-md-2 control-label">Process</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="ProcessDD" CssClass="col-md-2 control-label">Process</asp:Label>
             <div class="col-md-10">
                 
-                  <asp:DropDownList ID="Process" runat="server" DataTextField="Name" DataValueField="ID" CssClass="form-control"></asp:DropDownList>
+                  <asp:DropDownList ID="ProcessDD" runat="server" DataTextField="Name" DataValueField="ID" CssClass="form-control"></asp:DropDownList>
 
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="Process"
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="ProcessDD"
                     CssClass="text-danger" ErrorMessage="The Process field is required." />
             </div>
         </div>
 
                    <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="Title" CssClass="col-md-2 control-label">Title</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="TitleDD" CssClass="col-md-2 control-label">Title</asp:Label>
             <div class="col-md-10">
                 
-                  <asp:DropDownList ID="Title" runat="server" CssClass="form-control"></asp:DropDownList>
+                  <asp:DropDownList ID="TitleDD" runat="server" CssClass="form-control"></asp:DropDownList>
 
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="Title"
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="TitleDD"
                     CssClass="text-danger" ErrorMessage="The Title field is required." />
             </div>
         </div>
@@ -88,7 +88,7 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
+                <asp:Button runat="server" ID="RegisterBtn" Text="Register" CssClass="btn btn-default" OnClick="RegisterBtn_Click" />
             </div>
         </div>
     </div>

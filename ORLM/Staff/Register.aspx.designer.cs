@@ -22,22 +22,22 @@ namespace ORLM.Staff {
         protected global::System.Web.UI.WebControls.Literal ErrorMessage;
         
         /// <summary>
-        /// Process control.
+        /// ProcessDD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Process;
+        protected global::System.Web.UI.WebControls.DropDownList ProcessDD;
         
         /// <summary>
-        /// Title control.
+        /// TitleDD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Title;
+        protected global::System.Web.UI.WebControls.DropDownList TitleDD;
         
         /// <summary>
         /// FName control.
@@ -92,5 +92,14 @@ namespace ORLM.Staff {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
+        
+        /// <summary>
+        /// RegisterBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button RegisterBtn;
     }
 }
