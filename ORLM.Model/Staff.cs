@@ -8,6 +8,7 @@ namespace ORLM.Model
 {
    public class Staff
     {
+        public int ID { get; set; }
         public string FName { get; set; }
 
         public string LName { get; set; }
@@ -22,6 +23,10 @@ namespace ORLM.Model
 
         public string UserId { get; set; }
 
+        public string role_id { get; set; }
+        public string FullName { get { return FName + " " + LName; } }
+
+        public bool isVerified { get; set; }
 
 
     }

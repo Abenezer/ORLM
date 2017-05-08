@@ -1,7 +1,28 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ORLM.Admin.AdminMaster" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Menu ID="Menu1" runat="server"></asp:Menu>
-     <asp:ContentPlaceHolder ID="AdminContent" runat="server">
-            </asp:ContentPlaceHolder>
+  <div class="row ">
+    <div class="col-md-3">
+       <br />
+          <br />
+          <br />
+          <br />
+          <br />
+<div class="list-group">
+  <a href="/Admin" class="list-group-item active">Admin Page</a>
+  <a href="CreateProcess" class="list-group-item">Create Process</a>
+  <a href="ConfirmStaff" class="list-group-item">Confirm Staff</a>
+  <a href="#" class="list-group-item">Other task</a>
+  <a href="#" class="list-group-item">Other Task2</a>
+</div>  
 
+        </div>
+
+  <div class="col-md-7">
+     <asp:ContentPlaceHolder ID="AdminContent" runat="server">    
+
+            </asp:ContentPlaceHolder>
+    
+      </div>
+
+      </div>
 </asp:Content>

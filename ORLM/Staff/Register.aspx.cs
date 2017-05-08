@@ -24,20 +24,22 @@ namespace ORLM.Staff
 
         protected void Page_Load(object sender, EventArgs e)
         {
-          
 
-            ProcessDD.DataSource = pl.GetAllProcesses();
-            ProcessDD.DataBind();
+            if (!IsPostBack)
+            {
+                ProcessDD.DataSource = pl.GetAllProcesses();
+                ProcessDD.DataBind();
 
-            TitleDD.DataSource = sl.getRoles();
-                      
-            TitleDD.DataBind();
+                TitleDD.DataSource = sl.getRoles();
+
+                TitleDD.DataBind();
+            }
 
         }
 
         protected void RegisterBtn_Click(object sender, EventArgs e)
         {
-
+          // int x= int.Parse(ProcessDD.SelectedItem.Value);
 
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
@@ -52,6 +54,7 @@ namespace ORLM.Staff
                     Email = Email.Text,
                     ProcessID = int.Parse(ProcessDD.SelectedItem.Value),
                     Title = TitleDD.SelectedItem.Text,
+                    role_id = TitleDD.SelectedItem.Value,
                     PhoneNumber = Phone.Text,
                     UserId = user.Id,
                    
@@ -59,7 +62,7 @@ namespace ORLM.Staff
 
                 if (sl.RegisterStaff(staff) > 0)
                 {
-                    manager.AddToRole(user.Id, staff.Title);
+                    //manager.AddToRole(user.Id, staff.Title);
                     signInManager.SignIn(user, isPersistent: true, rememberBrowser: true);
                     //Server.TransferRequest("~/default.aspx");
                     IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);

@@ -25,7 +25,7 @@
             <asp:Label runat="server" AssociatedControlID="TitleDD" CssClass="col-md-2 control-label">Title</asp:Label>
             <div class="col-md-10">
                 
-                  <asp:DropDownList ID="TitleDD" runat="server" CssClass="form-control"></asp:DropDownList>
+                  <asp:DropDownList ID="TitleDD" runat="server" DataTextField="Name" DataValueField="ID"  CssClass="form-control"></asp:DropDownList>
 
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="TitleDD"
                     CssClass="text-danger" ErrorMessage="The Title field is required." />

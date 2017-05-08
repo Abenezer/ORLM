@@ -13,8 +13,7 @@ namespace ORLM.Admin
         {
             BLL.Process.ProcessLogic pl = new BLL.Process.ProcessLogic();
 
-            DropDownList1.DataSource = pl.GetAllProcesses();
-            DropDownList1.DataBind();
+          
 
         }
     }

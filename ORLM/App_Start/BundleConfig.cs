@@ -34,6 +34,19 @@ namespace ORLM
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/uiLibs").Include(
+                "~/Scripts/bootstrap-toggle.js"
+                ));
+
+ bundles.Add(new StyleBundle("~/Content/uiCSS").Include(
+      "~/Content/bootstrap-toggle.css",
+                 "~/Content/theme.min.css",
+                 "~/Content/font-awesome/css/font-awesome.min.css",
+               
+                 "~/Content/tiles.css",
+                   "~/Content/side-menu.css"
+                ));
+
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",
                 new ScriptResourceDefinition

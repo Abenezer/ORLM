@@ -15,7 +15,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server" Text="Create Process" CssClass="btn btn-default" ID="createBtn" OnClick="createBtn_Click" />
+                <asp:Button runat="server" Text="Create Process" CssClass="btn btn-primary" ID="createBtn" OnClick="createBtn_Click" />
             </div>
         </div>
     </div>

@@ -37,5 +37,14 @@ namespace ORLM.Tests
             Assert.AreEqual(pl.GetProcess(id).Name, "HR");
 
         }
+
+
+        [TestMethod]
+        public void JoinTableAdabter()
+        {
+            DAL.ORLMDataSetTableAdapters.StaffTableAdapter sta = new DAL.ORLMDataSetTableAdapters.StaffTableAdapter();
+            Assert.AreEqual(sta.GetDataByID(4)[0].Title, "PO");
+
+        }
     }
 }

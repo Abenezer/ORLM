@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Loss.master.cs" Inherits="ORLM.Loss.Loss" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
+    <div class="row ">
+    <div class="col-md-3">
+       <br />
+          <br />
+          <br />
+          <br />
+          <br />
+<div class="list-group">
+  <a href="/Loss/Manage" class="list-group-item active">Loss Management</a>
+  <a href="Identification" class="list-group-item">Identify Loss</a>
+  <a href="Assignment" class="list-group-item">Assign Loss</a>
+  <a href="#" class="list-group-item">Other task</a>
+  <a href="#" class="list-group-item">Other Task2</a>
+</div>  
+
+        </div>
+
+  <div class="col-md-7">
+     <asp:ContentPlaceHolder ID="LossContent" runat="server">    
+
+            </asp:ContentPlaceHolder>
+    
+      </div>
+
+      </div>
+
+</asp:Content>
